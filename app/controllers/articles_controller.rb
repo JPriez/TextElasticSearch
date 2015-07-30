@@ -18,9 +18,8 @@ class ArticlesController < ApplicationController
       render 'new'
     end
   end
-
   private
     def article_params
-      param.require(:article).permit :title, :text
+      params.require(:article).permit :title, :text
     end
 end
