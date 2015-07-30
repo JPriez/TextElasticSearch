@@ -1,16 +1,16 @@
 default: &default
   adapter: postgresql
+  encoding: unicode
   pool: 5
-  timeout: 5000
 
 development:
   <<: *default
-  database: db/development.postgresql
+  database: elastic_development
 
 test:
   <<: *default
-  database: db/test.postgresql
+  database: elastic_test
 
 production:
   <<: *default
-  database: db/production.postgresql
+  database: textelasticsearch
